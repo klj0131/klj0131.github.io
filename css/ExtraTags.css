@@ -1570,3 +1570,37 @@ div.videos[col='4'] iframe {
   width: calc(25% - 2 * 4px);
 }
 
+
+.hl-label {
+    color: rgb(255, 255, 255);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.hl-label.default {
+    background-color: rgb(119, 119, 119);
+}
+
+.hl-label.blue {
+    background-color: rgb(66, 139, 202);
+}
+
+.hl-label.pink {
+    background-color: rgb(255, 105, 180);
+}
+
+.hl-label.red {
+    background-color: red;
+}
+
+.hl-label.purple {
+    background-color: rgb(111, 66, 193);
+}
+
+.hl-label.green {
+    background-color: rgb(92, 184, 92);
+}
+
+.hl-label.orange {
+    background-color: rgb(255, 140, 0);
+}
