@@ -28,6 +28,10 @@ a#site-name {
     font-family:title!important
 }
 
+#page-header {
+    background: transparent!important;
+}
+
 #web_bg {
     position: fixed;
     z-index: -999;
