@@ -32,6 +32,7 @@ a#site-name {
     background: transparent!important;
 }
 
+
 #web_bg {
     position: fixed;
     z-index: -999;
@@ -52,6 +53,26 @@ a#site-name {
     padding-bottom: 15px;
 }
 
+[data-theme='dark'] #footer-wrap a {
+    color: #a8a5a5;
+}
+
+[data-theme='dark'] #footer-wrap {
+    color: #a8a5a5;
+}
+
+#rightside>div>a, #rightside>div>button {
+    border-radius: 12px;
+}
+
+#rightside>div>a, #rightside>div>button {
+    margin-bottom: 8px;
+}
+
+div .tabs {
+    background: var(--card-bg)!important;
+}
+
 
 #footer {
     background: rgba(255,255,255,.15);
@@ -63,14 +84,6 @@ a#site-name {
 
 #footer::before {
     background: rgba(255,255,255,.15)
-}
-
-#footer #footer-wrap {
-    color: var(--font-color)
-}
-
-#footer #footer-wrap a {
-    color: var(--font-color)
 }
 
 #content-inner {
