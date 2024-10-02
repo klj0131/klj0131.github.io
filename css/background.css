@@ -62,15 +62,26 @@ a#site-name {
 }
 
 #rightside>div>a, #rightside>div>button {
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 #rightside>div>a, #rightside>div>button {
     margin-bottom: 8px;
 }
 
+#rightside > div > button, #rightside > div > a {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 18px !important;
+}
+
+#rightside-config-hide {
+    transform: translate(55px, 0)!important;
+}
+
 #rightside {
-    transform: translateX(-45px)!important;
+    transform: translateX(-50px)!important;
+    bottom: 40px !important;
 }
 
 div .tabs {
@@ -170,4 +181,94 @@ a, img, i {
 ::-moz-selection {
   color: #fff;
   background-color: #49b1f5;
+}
+
+/*aplayer日间模式调整*/
+/*背景色*/
+.aplayer{
+    background: rgba(255, 255, 255, .95)!important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07),0 1px 5px 0 rgba(0,0,0,.1);
+    position: relative;
+}
+.aplayer.aplayer-fixed .aplayer-lrc:after,.aplayer.aplayer-fixed .aplayer-lrc:before {
+    display: none
+}
+.aplayer-list-cur {
+    background: #37ABF7!important;
+}
+.aplayer.aplayer.aplayer-fixed .aplayer-body{
+    background:rgba(255, 255, 255, .95)!important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
+    position: fixed;
+}
+/*毛玻璃效果*/
+.aplayer-list{
+    backdrop-filter: blur(3px);
+}
+.aplayer-info{
+    backdrop-filter: blur(3px);
+}
+/*滚动条*/
+.aplayer .aplayer-list ol::-webkit-scrollbar {
+    width: 5px;
+}
+.aplayer .aplayer-list ol::-webkit-scrollbar-thumb {
+    border-radius: 3px !important;
+    background-color: #49b1f5 !important;
+}
+.aplayer .aplayer-list ol::-webkit-scrollbar-thumb:hover {
+    background-color: #49b1f5 !important;
+}
+
+/*圆角*/
+.aplayer.aplayer-fixed .aplayer-list{
+    border-radius: 6px 6px 0 0!important;
+}
+.aplayer.aplayer-fixed .aplayer-miniswitcher{
+    border-radius: 0 6px 6px 0!important;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{
+    transition: 0.28s!important;
+    border-radius: 6px!important;
+}   
+
+/*aplayer黑暗模式*/
+[data-theme=dark]
+.aplayer{
+    background: rgba(22, 22, 22, 0.60)!important;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
+}
+[data-theme=dark]
+.aplayer.aplayer-fixed .aplayer-body{
+    background: rgba(22, 22, 22, 0.60)!important;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
+}
+[data-theme=dark]
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{
+    fill: #d4d4d4;
+}
+/*选中与播放中歌曲激活颜色*/
+[data-theme=dark]   
+.aplayer .aplayer-list ol li:hover{
+    background: #2B2B2B!important;
+}
+[data-theme=dark]
+.aplayer .aplayer-list ol li.aplayer-list-light{
+    background: #2B2B2B!important;
+}
+
+
+[data-theme=dark]
+.aplayer .aplayer-info .aplayer-controller .aplayer-time{
+    color: #d4d4d4;
+}
+[data-theme=dark]
+.aplayer .aplayer-list ol li .aplayer-list-index{
+    color: #d4d4d4;
+}
+[data-theme=dark]
+.aplayer .aplayer-list ol li .aplayer-list-author{
+    color: #d4d4d4;
 }
