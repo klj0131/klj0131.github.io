@@ -17,8 +17,18 @@
 #article-container h6:before {
     content: "H6";
 }
-h1#site-title {
+#article-container>h1,
+#article-container>h2,
+#article-container>h3,
+#article-container>h4,
+#article-container>h5,
+#article-container>h6,
+.post-title {
+    font-family: "Microsoft JhengHei"!important;
+    font-size: 28px;
+}
 
+h1#site-title {
     font-family:title!important
 }
 span#subtitle {
@@ -45,6 +55,18 @@ a#site-name {
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: 'ZhuZiAYuanJWD';
+    src: url('/font/ZhuZiAWan.ttf');
+    font-display: swap;
+    font-weight: lighter
+}
+
+#article-container {
+    font-family: 'ZhuZiAYuanJWD';
+    font-size: 18px;
 }
 
 #footer-wrap {
@@ -138,9 +160,6 @@ body {
         default;
 }
 
-.card-widget {
-    opacity: .9;
-}
 
 
 a, img, i {
