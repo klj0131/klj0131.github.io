@@ -1,3 +1,5 @@
+/* note 暂时因冲突不可用，替换形式为todo */
+
 .admonition {
   margin: 1.5625em 0;
   padding: .6rem;
@@ -12,62 +14,65 @@
 
 p.admonition-title {
   position: relative;
-  margin: -.6rem -.6rem .8em -.6rem !important;
-  padding: .4rem .6rem .4rem 2.5rem;
+  margin: -.6rem -.6rem .2em -.6rem !important;
+  padding: .2rem .6rem .1em 2.5rem;
   font-weight: 700;
-  background-color:rgba(66, 185, 131, .1);
+  font-size: 18px;
 }
 
 .admonition-title::before {
   position: absolute;
-  top: .9rem;
-  left: 1rem;
-  width: 12px;
-  height: 12px;
-  background-color: #42b983;
-  border-radius: 50%;
-  content: ' ';
+  bottom: 0.04rem;
+  left: .8rem;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f05a';
+  font-weight: 900;
+  font-size: 1rem;
 }
 
+/* Info styles */
+.admonition.info {
+  border-color: #00b8d4;
+}
 .info>.admonition-title, .todo>.admonition-title {
   background-color: rgba(0,184,212,.1);
 }
-
-.warning>.admonition-title, .attention>.admonition-title, .caution>.admonition-title {
-  background-color: rgba(255,145,0,.1);
+.info>.admonition-title::before {
+  color: #00b8d4;
 }
 
-.failure>.admonition-title, .missing>.admonition-title, .fail>.admonition-title, .error>.admonition-title {
-  background-color: rgba(255,82,82,.1);
+/* Todo styles */
+.todo>.admonition-title::before, .todo>.admonition-title::before, .todo>.admonition-title::before {
+  color: #42b983;
+  content: '\f0c1'; /* todo使用链接图标 */
+}
+.todo>.admonition-title {
+  background-color: rgba(66, 185, 131, .1);
 }
 
-.admonition.info, .admonition.todo {
-  border-color: #00b8d4;
-}
-
+/* Warning styles */
 .admonition.warning, .admonition.attention, .admonition.caution {
   border-color: #ff9100;
 }
+.warning>.admonition-title, .attention>.admonition-title, .caution>.admonition-title {
+  background-color: rgba(255,145,0,.1);
+}
+.warning>.admonition-title::before, .attention>.admonition-title::before, .caution>.admonition-title::before {
+  color: #ff9100;
+  content: '\f071'; /* 警告使用 exclamation-triangle 图标 */
+}
 
+/* Error styles */
 .admonition.failure, .admonition.missing, .admonition.fail, .admonition.error {
   border-color: #ff5252;
 }
-
-.info>.admonition-title::before, .todo>.admonition-title::before {
-  background-color: #00b8d4;
-  border-radius: 50%;
+.failure>.admonition-title, .missing>.admonition-title, .fail>.admonition-title, .error>.admonition-title {
+  background-color: rgba(255,82,82,.1);
 }
-
-.warning>.admonition-title::before, .attention>.admonition-title::before, .caution>.admonition-title::before {
-  background-color: #ff9100;
-  border-radius: 50%;
+.failure>.admonition-title::before, .missing>.admonition-title::before, .fail>.admonition-title::before, .error>.admonition-title::before {
+  color: #ff5252;
+  content: '\f057'; /* 错误使用 times-circle 图标 */
 }
-
-.failure>.admonition-title::before,.missing>.admonition-title::before,.fail>.admonition-title::before,.error>.admonition-title::before{
-  background-color: #ff5252;;
-  border-radius: 50%;
-}
-
 .admonition>:last-child {
   margin-bottom: 0 !important;
 }
